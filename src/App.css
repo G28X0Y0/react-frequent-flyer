@@ -1,0 +1,94 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.visual {
+  height: 250px;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.bigger {
+  height: 400px !important;
+}
+
+.card {
+  width: clamp(45ch, 50%, 75ch);
+  display: flex;
+  flex-direction: column;
+  background: hsl(182, 29%, 96%);
+  padding: 1rem;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1rem
+}
+.form {
+  margin: 20px;
+}
+
+.field {
+  margin: 15px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+input[type=text] {
+  height: 24px;
+  width: 250px;
+  font-size: 16px;
+}
+
+input[type=submit] {
+  width: 65px;
+  height: 30px;
+  padding: 0;
+}
+
+.submitContainer {
+  margin-top: 16px;
+}
+
+.error {
+  margin-top: 12px;
+}
+
+.note {
+  font-size: .75rem;
+}
+
+ul {
+  width: clamp(48ch, 50%, 75ch);
+  margin: 0px;
+  padding: 8px 0;
+  background: #dad9d9;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
