@@ -2,6 +2,7 @@ import { FrequentFlyerModelInterface } from '../interface/frequent-flyer-model-i
 import { FrequentFlyerDtoInterface } from '../interface/frequent-flyer-dto-interface';
 import { FrequentFlyerModel } from '../model/frequent-flyer-model';
 
+// console.log(`mm= ${JSON.stringify(this.ffClub[m])}`);
 export class FrequentFlyerClubService {
   ffClub:Array<FrequentFlyerModelInterface> = [];
 
