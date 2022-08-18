@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Routes ,Route } from 'react-router-dom';
 
 import './App.css';
 import Welcome from './components/welcome';
@@ -14,27 +14,27 @@ const ffcService = new FrequentFlyerClubService();
 
 function App() {
   return (
-      <Router>
+      <Route>
         <div>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Route path='/welcome' element={<Home/>} />
             </li>
             <li>
-              <Link to="/edit">Edit</Link>
+              <Route path="/edit"/>
             </li>
           </ul>
 
-          <Switch>
+          <Route>
             <Route exact path="/">
               <Home />
             </Route>
             <Route path="/edit">
               <Edit />
             </Route>
-          </Switch>
+          </Route>
         </div>
-      </Router>
+      </Route>
   );
 }
 function Home() {
