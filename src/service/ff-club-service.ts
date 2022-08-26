@@ -24,13 +24,14 @@ export class FrequentFlyerClubService {
     const m = this.ffClub[this.ffClub.length - 1];
 
     if (m) {
-      return m;
+      return <FrequentFlyerModel>m;
     } else {
       return {
+        keyid: 0,
         lastName: '',
         firstName: '',
         status: '',
-        points: -1,
+        points: -1
       };
     }
   }

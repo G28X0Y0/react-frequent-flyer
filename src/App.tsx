@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
-import { Routes ,Route } from 'react-router-dom';
+import {
+  Route,
+} from "react-router-dom";
 
 import './App.css';
 import Welcome from './components/welcome';
@@ -26,7 +28,7 @@ function App() {
           </ul>
 
           <Route>
-            <Route exact path="/">
+            <Route path="/">
               <Home />
             </Route>
             <Route path="/edit">
@@ -38,7 +40,7 @@ function App() {
   );
 }
 function Home() {
-  const { register, handleSubmit, watch, errors } = useForm<Inputs>();
+  const { register, handleSubmit, errors } = useForm<Inputs>();
   const [id, setId] = useState(-1)
 
   const onSubmit = (data: any) => {
@@ -87,8 +89,8 @@ function Home() {
 
 function Edit() {
   const m = ffcService.getMemberDetails();
-  const { register, handleSubmit, watch, errors } = useForm<Inputs>();
-  const [id, setId] = useState(ffcService.getMemberId())
+  const { register, handleSubmit, errors } = useForm<Inputs>();
+  const [id] = useState(ffcService.getMemberId())
 
   const onSubmit = (data: any) => {
     ffcService.updateClubMember({

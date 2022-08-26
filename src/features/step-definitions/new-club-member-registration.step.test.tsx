@@ -27,6 +27,9 @@ defineFeature(feature, test => {
       fireEvent.change(firstName, { target: { value: 'John' } });
       fireEvent.change(lastName, { target: { value: 'Appleseed' } });
 
+      fireEvent.change(firstName, {target: { value: 'Mark'}});
+      fireEvent.change(lastName, {target: {value: 'Sorensen'}})
+
       // @ts-ignore
       expect(firstName.value).toBe('John');
       // @ts-ignore
